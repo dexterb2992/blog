@@ -16,8 +16,8 @@ return [
 
     // Meta
     'meta' => [
-        'keywords' => 'PJ Blog,blog,pigjian,laravel,vuejs',
-        'description' => 'Nothing is impossible in PJ Blog'
+        'keywords' => env('APP_KEYWORDS', 'A simple blog'),
+        'description' => env("APP_DESCRIPTION", "A description.")
     ],
 
     // Social Share
@@ -36,8 +36,8 @@ return [
 
     // Article Page
     'article' => [
-        'title'       => 'Nothing is impossible.',
-        'description' => 'https://pigjian.com',
+        'title'       =>  env("APP_DESCRIPTION", "A simple description"),
+        'description' => 'https://davaothenix.com',
         'number'      => 15,
         'sort'        => 'desc',
         'sortColumn'  => 'published_at',
@@ -54,15 +54,15 @@ return [
     'footer' => [
         'github' => [
             'open' => true,
-            'url'  => 'https://github.com/jcc',
+            'url'  => 'https://davaothenix.com',
         ],
         'twitter' => [
             'open' => true,
-            'url'  => 'https://twitter.com/pigjian'
+            'url'  => 'https://twitter.com/dexterb2992'
         ],
-        'meta' => '© PJ Blog 2016. Powered By Jiajian Chan',
+        'meta' => '© '.env("APPLICATION_NAME", "Dexter's Blog").' '.date('Y'),
     ],
 
-    'license' => 'Powered By Jiajian Chan.<br/>This article is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.',
+    'license' => '',
 
 ];
